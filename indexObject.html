@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object Pada Javascript</title>
+</head>
+<body>
+<h1>Object Pada Javascript</h1>
+<img src="gambar/pikachu.png" width="300">
+<br>
+
+<!-- Nama :<span id="nama"></span>
+Umur :<span id="umur"></span>
+Sifat :<span id="sifat"></span> -->
+
+<div id="box"></div>
+
+<script>
+
+// membuat object
+
+// KEY DAN VALUE
+var programmer = {
+    nama : "Hilman",
+    umur : 23,
+    sifat : "mudah emosi",
+    getdata : function(){
+     return "Nama: " + this.nama +  " umur: "+this.umur;
+    },
+    setdata : function(nama){
+        this.nama = nama;
+    }
+};
+
+// ======MUTABLE=======
+var designer = programmer;
+designer.nama = "messi";
+
+document.getElementById('box').innerHTML = designer.nama;
+
+// var designer = new Object();
+// designer.nama = "alex"
+// designer.umur = "48"
+
+// document.getElementById('nama').innerHTML = designer[nama];
+// document.getElementById('umur').innerHTML = designer[umur];
+// document.getElementById('sifat').innerHTML = programmer.sifat;
+
+// programmer.setdata("alex");
+// document.getElementById('box').innerHTML = programmer.getdata();
+
+// =======OBJECT PROTOTYPE=======
+// function pemain_bola( nama_x, umur ){
+//     this.nama = nama_x;
+//     this.umur = umur;
+// }
+
+// pemain_bola.prototype.negara = "argentina";
+
+// var messi = new pemain_bola ("lionel messi", 30);
+// var suarez = new pemain_bola ("Luis Suarez", 32);
+
+
+// document.getElementById('box').innerHTML = suarez.negara;
+
+</script>
+</body>
+</html>
